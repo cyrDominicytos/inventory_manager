@@ -11,32 +11,19 @@
 					<div class="d-flex flex-column position-xl-fixed top-0 bottom-0 w-xl-600px scroll-y">
 						<!--begin::Content-->
 						<div class="d-flex flex-row-fluid flex-column text-center p-10 pt-lg-20">
-							<!--begin::Logo-->
-							<a href="../../demo12/dist/index.html" class="py-9 mb-5">
-								<img alt="Logo" src="<?= base_url(); ?>/public/assets/media/logos/logo-2.svg " class="h-60px" />
-							</a>
+							<!--begin::Logo-->							
 							<!--end::Logo-->
 							<!--begin::Title-->
-							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #fff;">Bienvenue sur <?= getenv('APP_NAME') ?></h1>
+							<h1 class="fw-bolder fs-2qx pb-5 pb-md-10" style="color: #fff;margin-top:40%">Bienvenue sur <?= getenv('APP_NAME') ?></h1>
 							<!--end::Title-->
 							<!--begin::Description-->
 							<p class="fw-bold fs-2" style="color: #fff;">Votre Application 
-							<br />de gestion de stock et de comptabilité</p>
+							<br />de gestion de stock <br> pour votre bar/restaurant </p>
 							<!--end::Description-->
 						</div>
 						<!--end::Content-->
 						<!--begin::Illustration-->
-						<div class="d-flex flex-row-auto bgi-no-repeat bgi-position-x-center bgi-size-contain bgi-position-y-bottom min-h-100px min-h-lg-350px">
-                             <!-- Owl-Carousel -->
-                            <div class="owl-carousel owl-theme">
-                                <img src="<?= base_url(); ?>/public/assets/media/presentation/pre1.png" alt="" class="login_img">
-                                <img src="<?= base_url(); ?>/public/assets/media/presentation/pre2.png" alt="" class="login_img">
-                                <img src="<?= base_url(); ?>/public/assets/media/presentation/pre3.png" alt="" class="login_img">
-                                <img src="<?= base_url(); ?>/public/assets/media/presentation/pre4.png" alt="" class="login_img">
-                                <img src="<?= base_url(); ?>/public/assets/media/presentation/pre5.png" alt="" class="login_img">                                
-                            </div>
-                            <!-- /Owl-Carousel -->
-                        </div>
+						
 						<!--end::Illustration-->
 					</div>
 					<!--end::Wrapper-->

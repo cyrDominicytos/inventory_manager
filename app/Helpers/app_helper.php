@@ -595,4 +595,29 @@ if (!function_exists("get_assign_options_by_product")) {
 					return  date_format($date,$format);
 				}
 			}
+
+
+
+			if (!function_exists("user_permission_array")) {
+				function user_permission_array()
+					{
+						$user = new \IonAuth\Libraries\IonAuth();
+						$modelGroupPermission  = new GroupPermissionModel();
+						$user_group = $user->getUsersGroups($user->user()->row()->id)->getResult()[0];
+						$groups = $modelGroupPermission->get_goupId($user_group->id);
+						return permission_array($groups);
+					}
+				}
+				
+				
+				
+				
+				if (!function_exists("permission_array")) {
+				function permission_array($groups)
+					{
+							if(count($groups) >0)
+								return (array) json_decode($groups[0]->permissions);
+								return [];
+					}
+				}
 ?>

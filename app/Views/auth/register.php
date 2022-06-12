@@ -21,7 +21,7 @@
 							<!--end::Title-->
 							<!--begin::Description-->
 							<p class="fw-bold fs-2" style="color: #fff;">Votre Application 
-							<br />de gestion de stock et de comptabilité</p>
+							<br />de gestion de stock <br> pour votre bar/restaurant </p>
 							<!--end::Description-->
 						</div>
 						<!--end::Content-->
