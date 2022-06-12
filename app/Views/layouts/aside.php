@@ -24,7 +24,7 @@
 						<div class="hover-scroll-overlay-y my-2 py-5 py-lg-8" id="kt_aside_menu_wrapper" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer" data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
 							<!--begin::Menu-->
 							<div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500" id="#kt_aside_menu" data-kt-menu="true">
-								<div class="menu-item menu-accordion">
+								<div class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'dashboard' ? ('active_custom_menu') : ('') ?> ">
                                     <a class="menu-link" href="<?= base_url() ?>/">
 										<span class="menu-icon">
 											<i class="bi bi-bar-chart-steps fs-3"></i>
@@ -38,7 +38,7 @@
 										<span class="menu-sectio text-muted text-uppercase fs-8 ls-1"  style="color: #fff;">Fonctionnalités</span>
 									</div>
 								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'sell' ? ('active_custom_menu') : ('') ?>">
 									<span class="menu-link">
 										<span class="menu-icon">
 											<i class="bi bi-cash-coin fs-3"></i>
@@ -63,7 +63,7 @@
 										</div>
 									</div>
 								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'order' ? ('active_custom_menu') : ('') ?>">
 									<span class="menu-link">
 										<span class="menu-icon">
 											<i class="bi bi-card-checklist fs-3"></i>
@@ -88,7 +88,7 @@
 										</div>
 									</div>
 								</div>
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'supply' ? ('active_custom_menu') : ('') ?>">
                                     <span class="menu-link">
                                         <span class="menu-icon">
                                             <i class="bi bi-cart-check fs-3"></i>
@@ -112,7 +112,7 @@
                                             </a>
                                         </div>
 									</div>
-                                    <div class="menu-item menu-accordion">
+                                    <div class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'inventory' ? ('active_custom_menu') : ('') ?>">
                                         <a class="menu-link" href="<?= base_url() ?>/inventory">
                                             <span class="menu-icon">
                                                 <i class="bi bi-grid fs-3"></i>
@@ -126,7 +126,7 @@
                                             <span class="menu-sectio text-muted text-uppercase fs-8 ls-1"  style="color: #fff;">Administration</span>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'sales_option' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-archive fs-3"></i>
@@ -151,7 +151,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'product_category' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-bookmark-plus fs-3"></i>
@@ -176,7 +176,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'product' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-archive fs-3"></i>
@@ -201,7 +201,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'price' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-archive fs-3"></i>
@@ -226,7 +226,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'client' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-person-plus fs-3"></i>
@@ -251,7 +251,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'fournisseur' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-person-plus fs-3"></i>
@@ -276,7 +276,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'livreur' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-person-plus fs-3"></i>
@@ -301,7 +301,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'users' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="fa fa-user fs-3"></i>
@@ -326,7 +326,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+                                    <div data-kt-menu-trigger="click" class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'groups' ? ('active_custom_menu') : ('') ?>">
                                         <span class="menu-link">
                                             <span class="menu-icon">
                                                 <i class="bi bi-gear fs-3"></i>
@@ -350,7 +350,7 @@
                                                 </a>
                                             </div>
                                         </div>
-                                        <div class="menu-item menu-accordion">
+                                        <div class="menu-item menu-accordion <?= service('request')->uri->getSegment(1) == 'config' ? ('active_custom_menu') : ('') ?>">
                                         <a class="menu-link" href="<?= base_url() ?>/config">
                                             <span class="menu-icon">
                                                 <i class="las la-tools fs-3"></i>

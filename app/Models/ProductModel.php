@@ -27,6 +27,7 @@ class ProductModel extends Model
         ->join('product_categories', 'products.products_product_categorie_id = product_categories.product_categories_id')
         ->join('exonerations', 'exonerations.exonerations_id = products.products_exonerations_id')
         ->select('*')
+        ->orderBy('products_created_at','DESC')
         ->get()->getResult();
     }
     public function get_product($productId)

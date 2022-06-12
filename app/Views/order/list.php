@@ -562,11 +562,11 @@
                                         <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1" />
                                     </div>
                                 </th>
-                                <th class="min-w-125px">Clients</th>
-                                <th class="min-w-125px">Montant</th>
-                                <th class="min-w-125px">Statut</th>
-                                <th class="min-w-125px">Créé le</th>
-                                <th class="text-end min-w-100px">Actions</th>
+                                <th class="min-w-125px" style="color:black;font-size:medium">Clients</th>
+                                <th class="min-w-125px" style="color:black;font-size:medium">Montant</th>
+                                <th class="min-w-125px" style="color:black;font-size:medium">Statut</th>
+                                <th class="min-w-125px" style="color:black;font-size:medium">Créé le</th>
+                                <th class="text-end min-w-100px" style="color:black;font-size:medium">Actions</th>
                             </tr>
                             <!--end::Table row-->
                         </thead>
@@ -584,16 +584,16 @@
                                             </div>
                                         </td>
                                         <!--end::Checkbox-->
-                                        <td class="d-flex align-items-center">
+                                        <td class="d-flex align-items-center" style="color:black">
                                             <?= $order->clients_company ?>
                                         </td>
-                                        <td class="">
+                                        <td class=""  style="color:black">
                                         <?= $order->orders_amount?>
                                         </td>
-                                        <td class="">
+                                        <td class=""  style="color:black">
                                         <?= status($order->orders_status)  ?>
                                         </td>
-                                        <td><?= "le ".format_date($order->orders_created_at , "d/m/Y à H:i:s") ?></td>
+                                        <td  style="color:black"><?= "le ".format_date($order->orders_created_at , "d/m/Y à H:i:s") ?></td>
                                         <td class="text-end">
                                             <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
                                             <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->

@@ -1,0 +1,12 @@
+TRUNCATE bills;
+TRUNCATE clients;
+TRUNCATE delivery_mens;
+TRUNCATE equivalence_quantities;
+TRUNCATE exonerations;
+TRUNCATE orders_details;
+TRUNCATE orders;
+TRUNCATE product_categories;
+TRUNCATE product_prices;
+TRUNCATE providers;
+TRUNCATE sell_details;
+TRUNCATE sales;

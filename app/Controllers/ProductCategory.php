@@ -55,7 +55,7 @@ class ProductCategory extends BaseController
 		}
 		
         
-            $data['external'] =productModel($type)->get()->getResultArray();
+            $data['external'] =productModel($type)->orderBy(productParams()[$type]['table'].'_created_at','DESC')->get()->getResultArray();
             $data['auth'] = $this->ionAuth;
             $data['type'] = $type;
             $data['showModal'] = $showModal;

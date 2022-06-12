@@ -25,6 +25,7 @@ class ProductPriceModel extends Model
        ->join('sales_options', 'product_prices.product_prices_sales_option_id = sales_options.sales_options_id')
        ->join('product_categories', 'products.products_product_categorie_id = product_categories.product_categories_id')
        ->select('*')
+       ->orderBy('product_prices_created_at','DESC')
        ->get()->getResult();
     }
     public function get_assign_options_by_product($productId)

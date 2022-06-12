@@ -124,7 +124,7 @@ class Price extends BaseController
             $data['product_prices_sales_option_id'] = $this->request->getPost('product_prices_sales_option_id');
             $data['product_prices_price'] = $this->request->getPost('product_prices_price');
 
-            //dd( $data['product_prices_price']);
+            //dd( $data);
             
             if($this->modelProductPrice->insert($data))
             {

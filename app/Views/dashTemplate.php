@@ -16,7 +16,6 @@
 		<link href="<?=  base_url(); ?>/public/assets/custom/css/style.css" rel="stylesheet" type="text/css" />
 
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="<?= base_url(); ?>/public/assets/media/logos/favicon.ico" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
@@ -37,6 +36,11 @@
 		<!-- style="font-family: 'Montserrat', sans-serif; font-weight: bold;" -->
 		<?= $this->renderSection('css') ?>
 	</head>
+	<style>
+		.active_custom_menu{
+			background-color: black;
+		}
+	</style>
 	<body id="kt_body"   class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 		<!--begin::Main-->
 		<!--begin::Root-->
