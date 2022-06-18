@@ -4,6 +4,7 @@ $request = service('request');
 $ionAuth = new \IonAuth\Libraries\IonAuth();
 if (session()->has("aside")) {
     $auth_user_permissions = session()->get("user_permission_array");
+
     echo session()->get("aside");
 } else {
     $auth_user_permissions = user_permission_array();
@@ -416,7 +417,7 @@ if (session()->has("aside")) {
                             </span>
                             <div class="menu-sub menu-sub-accordion menu-active-bg">
                                 <div class="menu-item menu-accordion">
-                                    <?php if (array_key_exists(101, $auth_user_permissions)) : ?>
+                                    <?php if (array_key_exists(21, $auth_user_permissions)) : ?>
                                         <a class="menu-link" href="<?= base_url() ?>/groups/new">
                                             <span class="menu-bullet">
                                                 <span class="bullet bullet-dot"></span>
@@ -425,7 +426,7 @@ if (session()->has("aside")) {
                                         </a>
                                     <?php endif; ?>
 
-                                    <?php if (array_key_exists(100, $auth_user_permissions)) : ?>
+                                    <?php if (array_key_exists(10, $auth_user_permissions)) : ?>
                                         <a class="menu-link" href="<?= base_url() ?>/groups/list">
                                             <span class="menu-bullet">
                                                 <span class="bullet bullet-dot"></span>
