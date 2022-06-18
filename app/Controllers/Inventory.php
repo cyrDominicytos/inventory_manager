@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Libraries\Pdf as GlobalPdf;
 use App\Models\InventoryModel;
 class Inventory extends BaseController
 {
@@ -55,6 +56,15 @@ class Inventory extends BaseController
         $data['auth'] = $this->ionAuth;
         return view('inventory/list',$data);
     }
+
+	public function generate_inventory_pdf(){
+        //$html = view('generate_pdf', [], true);
+		$model = new InventoryModel();
+		$data['list']= $model->get()->getResult();
+        $html = view('list_pdf/inventory', $data);
+		$pdf = new GlobalPdf();
+        $pdf->createPDF($html, 'inventaire'.date('YmdHis'), false);
+	}
     
 
 }

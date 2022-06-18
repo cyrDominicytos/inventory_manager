@@ -72,6 +72,7 @@ $routes->post('/product_category/create', 'ProductCategory::create_external');
 $routes->get('/product_category/banish/(:num)/(:num)', 'ProductCategory::deactivate/$1/$2');
 $routes->get('/product_category/activate/(:num)/(:num)', 'ProductCategory::activate/$1/$2');
 $routes->post('/product_category/edit', 'ProductCategory::edit_external');
+$routes->get('/pdf', 'ProductCategory::test_pdf');
 
 //Product management
 $routes->get('/product/list', 'Product::list/0');
@@ -128,7 +129,7 @@ $routes->get('/sell/vue', 'Sell::vue/$1');
 
 //Inventory management
 $routes->get('/inventory', 'Inventory::list');
-
+$routes->get('/inventory_pdf', 'Inventory::generate_inventory_pdf');
 
 //Dynamic
 $routes->post('/dynamic/product', 'Dynamic::product');

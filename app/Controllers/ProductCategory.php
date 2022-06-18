@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Controllers;
+use App\Libraries\Pdf as GlobalPdf;
+use App\Models\ProductCategoriesModel;
 
 class ProductCategory extends BaseController
 {
@@ -238,6 +240,15 @@ class ProductCategory extends BaseController
             return redirect()->back()->with("message", "Désolé cet utilisateur n'est pas valide !")->with("code", 0);
 		}
 
+	}
+
+	public function test_pdf(){
+        //$html = view('generate_pdf', [], true);
+		$model = new ProductCategoriesModel();
+		$data['list']= $model->orderBy('product_categories_created_at','DESC')->get()->getResult();
+        $html = view('list_pdf/categories', $data);
+		$pdf = new GlobalPdf();
+        $pdf->createPDF($html, 'mypdf', false);
 	}
 
 }
