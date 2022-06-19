@@ -22,7 +22,7 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5"><?= $client_count ?></div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5"><?= ($client_count < 0) ? 0 : $client_count ?></div>
                         <div class="fw-bold text-white">Clients</div>
                     </div>
                     <!--end::Body-->
@@ -43,7 +43,7 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5"><?= $provider_count ?></div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5"><?= ($provider_count < 0) ? 0 : $provider_count ?></div>
                         <div class="fw-bold text-white">Fournisseur</div>
                     </div>
                     <!--end::Body-->
