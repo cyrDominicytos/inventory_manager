@@ -170,7 +170,7 @@
                             </svg>
                         </span>
                         <!--end::Svg Icon-->
-                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">20</div>
+                        <div class="text-white fw-bolder fs-2 mb-2 mt-5">0</div>
                         <div class="fw-bold text-white">Produits en rupture</div>
                     </div>
                     <!--end::Body-->
