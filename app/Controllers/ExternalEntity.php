@@ -57,7 +57,7 @@ class ExternalEntity extends BaseController
         
             $data['external'] =externalModel($type)->get()->getResultArray();
             if(in_array($type, [1,2]))
-            $data['external'] =externalModel($type)->whereNotIn(externalParams()[$type]['table']."_id", [1])->get()->getResultArray();
+            $data['external'] =externalModel($type)->whereNotIn(externalParams()[$type]['table']."_id", [0])->get()->getResultArray();
             $data['auth'] = $this->ionAuth;
             $data['type'] = $type;
             $data['showModal'] = $showModal;
@@ -133,7 +133,7 @@ class ExternalEntity extends BaseController
 
             if(externalInsert($this->request->getPost('type'), $data))
             {
-                return redirect()->to("/".externalParams()[$this->request->getPost('type')]['externalName']."/list")->with('message', 'Nouveau client créé avec succès !')->with('code',1);
+                return redirect()->to("/".externalParams()[$this->request->getPost('type')]['externalName']."/list")->with('message', 'Nouveau '.externalParams()[$this->request->getPost('type')]['externalName'].' créé avec succès !')->with('code',1);
             }
             
         }

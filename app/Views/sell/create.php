@@ -497,11 +497,19 @@
     $(document).on('click', '#add', function(){
         if(!checkSelect())
             return;
-        var indexId = product.value+sale_option.value;
+        var indexId = product.value+''+sale_option.value;
+        if(inventory_product_quantity[indexId]===undefined || inventory_product_quantity[indexId]=== NaN){
+            quantity_not_enongh("Aucune correspondance trouvée pour ce produit en stock")
+            return 0;
+
+        }
+
         //Check if quantity is enongh
         if(parseInt(inventory_product_quantity[indexId]) < parseInt(price.value)){
             quantity_not_enongh("Quantité insuffisante. La quantité en stock restante pour ce produit est : "+inventory_product_quantity[indexId])
             return 0;
+        }else{
+            alert(parseInt(inventory_product_quantity[indexId])+" "+ parseInt(price.value))
         }
         inventory_product_quantity[indexId] = parseInt(inventory_product_quantity[indexId]) - parseInt(price.value);
 

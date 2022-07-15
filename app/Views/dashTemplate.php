@@ -1325,7 +1325,11 @@
 		<?= $this->renderSection('javascript') ?>
 		<!--end::Javascript-->
 		<script type="text/javascript">
+			var request_segment = "<?= service('request')->uri->getSegment(1) ?>"; 
+			$("div").removeClass("active_custom_menu");
+			$("."+request_segment).addClass("active_custom_menu");
 			var message = "<?=  session()->has('message') ? (session()->get('message')) : ("")?>";
+
 			var code = "<?=  session()->has('code') ? (session()->get('code')) : ("")?>";
 				window.onload = function ()
 			{

@@ -140,7 +140,7 @@ class Sell extends BaseController
         if($data['sales_options']==null)
             return redirect()->to("sales_option/list")->with('message', 'Veuillez enregistrer les options de vente !')->with('code',0);
        
-        $data['clients'] = $this->modelClient->where("clients_isActive", 1)->whereNotIn("clients_id", [1])->get()->getResult();
+        $data['clients'] = $this->modelClient->where("clients_isActive", 1)->whereNotIn("clients_id", [0])->get()->getResult();
         $data['delivery_mens'] = $this->modelDeliveryMen->where("delivery_mens_isActive", 1)->get()->getResult();
         $data['products'] = [];
         $data['sales_options'] = [];

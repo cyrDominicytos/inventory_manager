@@ -83,7 +83,7 @@ class Supply extends BaseController
         if($data['sales_options']==null)
             return redirect()->to("sales_option/list")->with('message', 'Veuillez enregistrer les options de vente !')->with('code',0);
        
-        $data['providers'] = $this->modelProvider->where("providers_isActive", 1)->whereNotIn("providers_id", [1])->get()->getResult();
+        $data['providers'] = $this->modelProvider->where("providers_isActive", 1)->whereNotIn("providers_id", [0])->get()->getResult();
         $data['products'] = [];
         $data['sales_options'] = [];
         $data['product_price'] = getProductPriceArray();
@@ -137,6 +137,7 @@ class Supply extends BaseController
 		}
        
         $data['supplies'] =$this->modelSupply->get_supply_list();
+        $data['inventory_data'] =getExistingProductQuantity();
         $data['auth'] = $this->ionAuth;
         return view('supply/list',$data);
     }
@@ -251,9 +252,9 @@ class Supply extends BaseController
 		if ($id >0)
 		{
             if($this->modelSupply->delete($id))
-                return redirect()->to("/order/list")->with("message", "La commande est supprimée avec succès !")->with("code", 1);
+                return redirect()->to("/supply/list")->with("message", "L'approvisionnement a été supprimé avec succès !")->with("code", 1);
             else
-                return redirect()->to("/order/list")->with("message", "Vous ne pouvez pas supprimer cette commande !")->with("code", 0);
+                return redirect()->to("/supply/list")->with("message", "Vous ne pouvez pas supprimer cet approvisionnement !")->with("code", 0);
 		}
 		else
 		{
