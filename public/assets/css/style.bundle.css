@@ -40554,13 +40554,13 @@ code:not([class*=language-]) {
 .table td,
 .table th,
 .table tr {
-    border-color: inherit;
+    /* border-color: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: inherit; */
     border-width: inherit;
     border-style: inherit;
     text-transform: inherit;
-    font-weight: inherit;
-    font-size: inherit;
-    color: inherit;
     height: inherit;
     min-height: inherit
 }

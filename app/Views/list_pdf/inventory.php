@@ -33,10 +33,9 @@
 <table id="customers">
   <tr>
     <th>Produits</th>
-    <th>Options de vente</th>
-    <th>Quantités Approvisionnées</th>
+    <th>Stock Initial</th>
     <th>Quantités Vendues</th>
-    <th>Quantités Restantes</th>
+    <th>Stock Final</th>
   </tr>
     <!--begin::Table body-->
     <tbody class="text-gray-600 fw-bold">
@@ -47,17 +46,15 @@
                     <td class="">
                     <?= $lst->products_name?>
                     </td>
+                    
                     <td class="">
-                    <?= $lst->sales_options_name?>
+                    <?= $lst->supply_quantity_total ." ".$lst->sales_options_name?>
                     </td>
                     <td class="">
-                    <?= $lst->supply_quantity_total?>
+                    <?= $lst->sell_quantity_total ." ".$lst->sales_options_name?>
                     </td>
                     <td class="">
-                    <?= $lst->sell_quantity_total?>
-                    </td>
-                    <td class="">
-                    <?= $lst->quantity_inventory?>
+                    <?= $lst->quantity_inventory ." ".$lst->sales_options_name?>
                     </td>
                    
                 </tr>

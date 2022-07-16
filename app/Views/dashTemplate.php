@@ -40,6 +40,19 @@
 		.active_custom_menu{
 			background-color: black;
 		}
+
+		thead > tr > th {
+			text-align: center;
+			color:black;
+			font-size:medium
+		}
+		thead > tr {
+			text-transform: uppercase;
+		}
+		tbody > tr > td {
+			text-align: center;
+			color: black;
+		}
 	</style>
 	<body id="kt_body"   class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 		<!--begin::Main-->

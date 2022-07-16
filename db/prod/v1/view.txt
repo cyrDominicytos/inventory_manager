@@ -1,3 +1,5 @@
+CREATE OR REPLACE VIEW inventory AS 
+
 SELECT 
 *,
 sum(`supplies`.`supplies_selling_quantity`) AS `supply_quantity_total`,
