@@ -620,4 +620,39 @@ if (!function_exists("get_assign_options_by_product")) {
 								return [];
 					}
 				}
+
+				if(!function_exists("export_file_type")){
+					function export_file_type(){
+						
+						return [
+								"1"=>"PDF",
+							  ];
+					}
+				}
+
+
+				if (!function_exists("sales_point")) {
+					function sales_point($sales)
+						{
+					
+							$data = [];
+							$temp = [];
+							$index = "";
+							foreach ($sales as $key => $sale){
+								if( $sale->sales_id == $index || $index==""){
+									$temp[count($temp)] = $sale;
+									$index = $sale->sales_id;
+								}else{
+									$data[$index] = $temp;
+									$temp = [];
+									$temp[count($temp)] = $sale;
+									$index = $sale->sales_id;
+								}
+							}
+							if($index!= "" && count($temp)>0)
+								$data[$index] = $temp;	
+							return $data;
+						}
+					}
+
 ?>

@@ -509,7 +509,7 @@
             quantity_not_enongh("Quantité insuffisante. La quantité en stock restante pour ce produit est : "+inventory_product_quantity[indexId])
             return 0;
         }else{
-            alert(parseInt(inventory_product_quantity[indexId])+" "+ parseInt(price.value))
+            
         }
         inventory_product_quantity[indexId] = parseInt(inventory_product_quantity[indexId]) - parseInt(price.value);
 

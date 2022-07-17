@@ -38,4 +38,5 @@ class SellDetailsModel extends Model
        ->whereNotIn("clients.clients_company", ["Système"])
        ->get()->getResult();
     }
+   
 }

@@ -12,6 +12,7 @@ use App\Models\SaleModel;
 use App\Models\SellDetailsModel;
 use App\Models\BillModel;
 use App\Models\OrdersModel;
+use App\Libraries\Pdf as GlobalPdf;
 class Sell extends BaseController
 {
     public  $ionAuth = null;
@@ -202,6 +203,62 @@ class Sell extends BaseController
         $data['auth'] = $this->ionAuth;
         return view('sell/list',$data);
     }
+    public function sales_point()
+    {
+
+        if (!$this->ionAuth->loggedIn() || !$this->ionAuth->isAdmin())
+		{
+			return redirect()->to('/')->with("message","Accès non autorisé !");
+		}
+       
+        $begin = "2000-01-01";
+        $end = date("Y-m-d H:i:s");
+        if($this->request->getPost()){
+            $begin = $this->request->getPost("begin");
+            $end = $this->request->getPost("end");
+            $data['old_begin'] = str_replace(" ","T",$begin);
+            $data['old_end'] = str_replace(" ","T",$end);
+            $data['sales'] =$this->modelSale->get_filter_sell_detail($begin, $end);
+        }else{
+            $data['sales'] =$this->modelSale->get_filter_sell_detail($begin, $end);
+           //    $data['inventory'] =  $this->modelInventory->report_pharmacy_inventory_quantity_temp_view($begin, $end);
+        }
+       
+       $data['sales'] = sales_point($data['sales']);
+       //dd( $end);
+       // dd($data['sales']);
+        $data['auth'] = $this->ionAuth;
+        return view('sell/sales_point',$data);
+    }
+
+    public function generate_sales_point_pdf(){
+       
+        if (!$this->ionAuth->loggedIn() || !$this->ionAuth->isAdmin())
+		{
+			return redirect()->to('/')->with("message","Accès non autorisé !");
+		}
+       
+        $begin = "2000-01-01";
+        $end = date("Y-m-d H:i:s");
+        if($this->request->getPost()){
+            $begin = $this->request->getPost("begin");
+            $end = $this->request->getPost("end");
+            $data['old_begin'] = str_replace(" ","T",$begin);
+            $data['old_end'] = str_replace(" ","T",$end);
+            $data['sales'] =$this->modelSale->get_filter_sell_detail($begin, $end);
+            $data['old_begin'] =  $data['old_begin'] ?  $data['old_begin'] : "-";
+            $data['old_end'] =  $data['old_end'] ?  $data['old_end'] : "-";
+            $data['auth'] = $this->ionAuth;
+            $data['sales'] = sales_point($data['sales']);
+            $html = view('list_pdf/sale_point', $data);
+            $pdf = new GlobalPdf();
+           return   $pdf->createSalePointPDF($html, 'point_ventes_'.date('YmdHis'), 1);
+        }else{
+            //error
+			return redirect()->to('/')->with("message","Accès non autorisé !");
+        }      
+       
+	}
     
     /**
 	 * Create a new client|provider|delivery_men
@@ -351,5 +408,15 @@ class Sell extends BaseController
 		}
 
 	}
+
+
+
+    //Search part
+
+   
+
+
+   
+  
 
 }

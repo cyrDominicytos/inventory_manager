@@ -126,6 +126,8 @@ $routes->post('/sell/edit', 'Sell::edit');
 $routes->get('/sell/invoice', 'Sell::invoice/$1');
 $routes->get('/sell/normalize', 'Sell::normalize/$1');
 $routes->get('/sell/vue', 'Sell::vue/$1');
+$routes->get('/sell/sales_point', 'Sell::sales_point');
+$routes->post('/sell/generate_sales_point_pdf', 'Sell::generate_sales_point_pdf');
 
 //Inventory management
 $routes->get('/inventory', 'Inventory::list');

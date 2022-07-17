@@ -9,6 +9,7 @@ use App\Models\GroupModel;
 use App\Models\ClientModel;
 use App\Models\ProviderModel;
 use App\Models\DeliveryMenModel;
+use App\Models\InventoryModel;
 use App\Models\ProductModel;
 use App\Models\ProductCategoriesModel;
 use App\Models\SalesOptionsModel;
@@ -107,6 +108,7 @@ class Auth extends \IonAuth\Controllers\Auth
         $this->modelSalesOptions = new SalesOptionsModel();
         $this->modelProductCategory = new ProductCategoriesModel();
         $this->modelOrder = new OrdersModel();
+        $this->modelInventory = new InventoryModel();
 
 
 		if (! empty($this->configIonAuth->templates['errors']['list']))
@@ -160,6 +162,7 @@ class Auth extends \IonAuth\Controllers\Auth
             $data['product_count'] = count($this->modelProduct->get()->getResult());
             $data['sale_options_count'] = count($this->modelSalesOptions->get()->getResult());
             $data['order_count'] = count($this->modelOrder->get()->getResult());
+            $data['stockout'] = count($this->modelInventory->where("quantity_inventory < ", 5)->get()->getResult());
             $data['auth'] = $this->ionAuth;
             return view('dashboard/dashboard',$data);
 		}

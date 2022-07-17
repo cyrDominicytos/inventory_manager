@@ -1,5 +1,7 @@
 <?= $this->extend('dashTemplate') ?>
-<?php $this->section('title'); echo  getenv('APP_NAME')."| Gestion des ventes"; $this->endSection()?>
+<?php $this->section('title');
+echo  getenv('APP_NAME') . "| Gestion des ventes";
+$this->endSection() ?>
 <?= $this->section('content') ?>
 <!--begin::Content-->
 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -23,7 +25,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-muted text-capitalize">Clients</li>
+                    <li class="breadcrumb-item text-muted text-capitalize">Ventes</li>
                     <!--end::Item-->
                     <!--begin::Item-->
                     <li class="breadcrumb-item">
@@ -31,7 +33,7 @@
                     </li>
                     <!--end::Item-->
                     <!--begin::Item-->
-                    <li class="breadcrumb-item text-dark">Liste des ventes</li>
+                    <li class="breadcrumb-item text-dark">Point des ventes</li>
                     <!--end::Item-->
                 </ul>
                 <!--end::Breadcrumb-->
@@ -40,94 +42,7 @@
             <!--begin::Actions-->
             <div class="d-flex align-items-center py-1">
                 <!--begin::Wrapper-->
-                <div class="me-4">
-                    <!--begin::Menu-->
-                    <a href="#" class="btn btn-sm btn-flex btn-light btn-active-primary fw-bolder" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-flip="top-end">
-                    <!--begin::Svg Icon | path: icons/duotune/general/gen031.svg-->
-                    <span class="svg-icon svg-icon-5 svg-icon-gray-500 me-1">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M19.0759 3H4.72777C3.95892 3 3.47768 3.83148 3.86067 4.49814L8.56967 12.6949C9.17923 13.7559 9.5 14.9582 9.5 16.1819V19.5072C9.5 20.2189 10.2223 20.7028 10.8805 20.432L13.8805 19.1977C14.2553 19.0435 14.5 18.6783 14.5 18.273V13.8372C14.5 12.8089 14.8171 11.8056 15.408 10.964L19.8943 4.57465C20.3596 3.912 19.8856 3 19.0759 3Z" fill="black" />
-                        </svg>
-                    </span>
-                    <!--end::Svg Icon-->Filter</a>
-                    <!--begin::Menu 1-->
-                    <div class="menu menu-sub menu-sub-dropdown w-250px w-md-300px" data-kt-menu="true" id="kt_menu_61cf0dc68ec25">
-                        <!--begin::Header-->
-                        <div class="px-7 py-5">
-                            <div class="fs-5 text-dark fw-bolder">Filter Options</div>
-                        </div>
-                        <!--end::Header-->
-                        <!--begin::Menu separator-->
-                        <div class="separator border-gray-200"></div>
-                        <!--end::Menu separator-->
-                        <!--begin::Form-->
-                        <div class="px-7 py-5">
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-bold">Status:</label>
-                                <!--end::Label-->
-                                <!--begin::Input-->
-                                <div>
-                                    <select class="form-select form-select-solid" data-kt-select2="true" data-placeholder="Select option" data-dropdown-parent="#kt_menu_61cf0dc68ec25" data-allow-clear="true">
-                                        <option></option>
-                                        <option value="1">Approved</option>
-                                        <option value="2">Pending</option>
-                                        <option value="2">In Process</option>
-                                        <option value="2">Rejected</option>
-                                    </select>
-                                </div>
-                                <!--end::Input-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-bold">Member Type:</label>
-                                <!--end::Label-->
-                                <!--begin::Options-->
-                                <div class="d-flex">
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid me-5">
-                                        <input class="form-check-input" type="checkbox" value="1" />
-                                        <span class="form-check-label">Author</span>
-                                    </label>
-                                    <!--end::Options-->
-                                    <!--begin::Options-->
-                                    <label class="form-check form-check-sm form-check-custom form-check-solid">
-                                        <input class="form-check-input" type="checkbox" value="2" checked="checked" />
-                                        <span class="form-check-label">Customer</span>
-                                    </label>
-                                    <!--end::Options-->
-                                </div>
-                                <!--end::Options-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Input group-->
-                            <div class="mb-10">
-                                <!--begin::Label-->
-                                <label class="form-label fw-bold">Notifications:</label>
-                                <!--end::Label-->
-                                <!--begin::Switch-->
-                                <div class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
-                                    <input class="form-check-input" type="checkbox" value="" name="notifications" checked="checked" />
-                                    <label class="form-check-label">Enabled</label>
-                                </div>
-                                <!--end::Switch-->
-                            </div>
-                            <!--end::Input group-->
-                            <!--begin::Actions-->
-                            <div class="d-flex justify-content-end">
-                                <button type="reset" class="btn btn-sm btn-light btn-active-light-primary me-2" data-kt-menu-dismiss="true">Reset</button>
-                                <button type="submit" class="btn btn-sm btn-primary" data-kt-menu-dismiss="true">Apply</button>
-                            </div>
-                            <!--end::Actions-->
-                        </div>
-                        <!--end::Form-->
-                    </div>
-                    <!--end::Menu 1-->
-                    <!--end::Menu-->
-                </div>
+                
                 <!--end::Wrapper-->
                 <!--begin::Button-->
                 <a href="<?= base_url() ?>/sell/new" class="btn btn-sm btn-primary" id="kt_toolbar_primary_button">Nouvelle vente</a>
@@ -145,7 +60,7 @@
             <!--begin::Card-->
             <div class="card">
                 <div id="infoMessage" style="color:red;">
-                    <?=  session()->has('message2') ? (session()->get('message2')) : ("")?>
+                    <?= session()->has('message2') ? (session()->get('message2')) : ("") ?>
                 </div>
                 <!--begin::Card header-->
                 <div class="card-header border-0 pt-6">
@@ -170,27 +85,29 @@
                     <div class="card-toolbar">
                         <!--begin::Toolbar-->
                         <div class="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-                            
+
                             <!--begin::Export-->
-                            
+
                             <!--end::Export-->
                             <!--begin::Add user-->
                             <a href="<?= base_url() ?>/sell/new" class="btn btn-primary">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
-                            <span class="svg-icon svg-icon-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
-                                    <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
-                                </svg>
-                            </span>
-                            <!--end::Svg Icon-->Nouvelle vente</a>
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr075.svg-->
+                                <span class="svg-icon svg-icon-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <rect opacity="0.5" x="11.364" y="20.364" width="16" height="2" rx="1" transform="rotate(-90 11.364 20.364)" fill="black" />
+                                        <rect x="4.36396" y="11.364" width="16" height="2" rx="1" fill="black" />
+                                    </svg>
+                                </span>
+                                <!--end::Svg Icon-->Nouvelle vente
+                            </a>
                             <!--end::Add user-->
                         </div>
                         <!--end::Toolbar-->
                         <!--begin::Group actions-->
                         <div class="d-flex justify-content-end align-items-center d-none" data-kt-user-table-toolbar="selected">
                             <div class="fw-bolder me-5">
-                            <span class="me-2" data-kt-user-table-select="selected_count"></span>Sélection</div>
+                                <span class="me-2" data-kt-user-table-select="selected_count"></span>Sélection
+                            </div>
                             <button type="button" class="btn btn-danger" data-kt-user-table-select="delete_selected">Supprimer la sélection</button>
                         </div>
                         <!--end::Group actions-->
@@ -262,7 +179,7 @@
                                                 <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
-                                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                 </button>
                                             </div>
                                             <!--end::Actions-->
@@ -469,7 +386,7 @@
                                                 <button type="submit" class="btn btn-primary" data-kt-users-modal-action="submit">
                                                     <span class="indicator-label">Submit</span>
                                                     <span class="indicator-progress">Please wait...
-                                                    <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+                                                        <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                                 </button>
                                             </div>
                                             <!--end::Actions-->
@@ -489,108 +406,159 @@
                 <!--end::Card header-->
                 <!--begin::Card body-->
                 <div class="card-body py-4">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <form action="" method="post" enctype="">
+                                <div class="form-group" id="search_form2">
+                                    <div class="input-group">
+                                        <div class="form-group">
+                                            <label class="form-label fw-bolder text-dark fs-6 ">Période Début</label>
+                                            <input name="begin" id="begin" type="datetime-local" class="form-control text-dark">
+                                        </div>
+                                        <div class="form-group" id="search-form">
+                                            <label class="form-label fw-bolder text-dark fs-6" id="search-label">Période Fin</label>
+                                            <input name="end" id="end" type="datetime-local" class="form-control text-dark">
+                                        </div>
+                                        <div class="input-group-append" >
+                                            <button title="Rechercher"  style="margin-top:30px; color:white" class="btn btn-sm bg-primary text-white" id="search_id"><i class="fas fa-search" style=" color:white"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label class="form-label fw-bolder text-dark fs-6 ">Exporter le résultat</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <select data-control="select2" data-placeholder="Attribuer un role..." class="form-select form-select-solid form-select-lg fw-bold select2-hidden-accessible" data-select2-id="select2-data-10-02r3" tabindex="-1" aria-hidden="true"  name="export_file_type" id="export_file_type">
+                                            <?php foreach (export_file_type() as $key => $val) : ?>
+                                                <option value="<?= $key ?>" <?= set_select('', $key) ?>><?= $val ?></option>
+                                            <?php endforeach; ?>
+                                        </select>
+                                    </div>
+                                    <div class="input-group-append" >
+                                        <button title="Exporter le résultat affiché" class="btn btn-sm btn-success bg-gray" id="export_id" style="height: 100%"><i class="fas fa-download"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!--begin::Table-->
-                    <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_table_users">
+                    <table class="table align-middle table-row-dashed fs-6 gy-5 mt-5" id="kt_table_users">
                         <!--begin::Table head-->
                         <thead>
                             <!--begin::Table row-->
-                            <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
-                                <th class="w-10px pe-2">
-                                    <div class="form-check form-check-sm form-check-custom form-check-solid me-3">
-                                        <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_table_users .form-check-input" value="1" />
-                                    </div>
-                                </th>
-                                <th class="min-w-125px">Clients</th>
+                            <tr class="text-start text-muted fw-bolder fs-7 text-uppercase gs-0"  style="background-image: linear-gradient(to bottom right,#5d6d7e, #FFF, #CCC, #5d6d7e);">
+                                <th class="min-w-125px">Dates</th>
+                                <th class="min-w-125px">Désignations</th>
+                                <th class="min-w-125px">Quantités</th>
+                                <th class="min-w-125px">Prix/Vente</th>
+                                <th class="min-w-125px">Réductions</th>
                                 <th class="min-w-125px">Montant</th>
-                                <th class="min-w-125px">Reduction sur vente</th>
-                                <th class="min-w-125px">Service de livraison</th>
-                                <th class="min-w-125px">Statut</th>
-                                <th class="min-w-125px">Créé le</th>
+                                <th class="min-w-125px">Livraison</th>
                                 <th class="text-end min-w-100px">Actions</th>
                             </tr>
                             <!--end::Table row-->
                         </thead>
                         <!--end::Table head-->
                         <!--begin::Table body-->
-                        <tbody class="text-gray-600 fw-bold">
+                        <tbody class="text-gray-600 fw-bold" >
                             <!--begin::Table row-->
-                            <?php $i = 1; foreach ($sales as $order): ?>
-                                <!--begin::Table row-->
+                            <?php 
+                            foreach ($sales as $temp) :   
+                                foreach ($temp as $order) :   ?>
                                     <tr>
-                                        <!--begin::Checkbox-->
-                                        <td>
-                                            <div class="form-check form-check-sm form-check-custom form-check-solid">
-                                                <input class="form-check-input" type="checkbox" value="1" />
-                                            </div>
-                                        </td>
-                                        <!--end::Checkbox-->
-                                        <td class="d-flex align-items-center">
-                                            <?= $order->clients_company ?>
+                                        <td class="">
+                                            <?= format_date($order->sales_created_at, "d/m/Y à H:i:s") ?>
                                         </td>
                                         <td class="">
-                                        <?= $order->sales_amount?>
+                                            <?= $order->products_name ?>
+                                        </td>
+                                        
+                                        <td class="">
+                                            <?= $order->sell_details_quantity.' ' .$order->sales_options_name ?>
                                         </td>
                                         <td class="">
-                                        <?= $order->sales_amount  - $order->sales_reduction?>
+                                            <?= $order->sell_details_selling_price?>
                                         </td>
                                         <td class="">
-                                        <?= livraison($order->sales_deliver_man)  ?>
+                                            <?= $order->sell_details_reduction?>
                                         </td>
                                         <td class="">
-                                        <?= status($order->sales_status)  ?>
+                                            <?= $order->sell_details_amount?>
                                         </td>
-                                        <td><?= format_date($order->sales_created_at, "d/m/Y à H:i:s") ?></td>
+                                        <td class="">
+                                            <?= livraison($order->sales_deliver_man)  ?>
+                                        </td>
+                                    
                                         <td class="text-end">
                                             <a href="#" class="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
-                                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
-                                            <span class="svg-icon svg-icon-5 m-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
-                                                </svg>
-                                            </span>
-                                            <!--end::Svg Icon--></a>
+                                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg-->
+                                                <span class="svg-icon svg-icon-5 m-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="black" />
+                                                    </svg>
+                                                </span>
+                                                <!--end::Svg Icon-->
+                                            </a>
                                             <!--begin::Menu-->
                                             <div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4" data-kt-menu="true">
                                                 <!--begin::Menu item
-                                                <div class="menu-item px-3">
-                                                    <a href="<?= base_url() ?>/sell/update/<?= $order->sales_id?>"  class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Editer</i></a>
-                                                </div>
-                                                end::Menu item-->
-                                                <?php if($order->sales_status == 2): ?>
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="<?= base_url() ?>/sell/invoice/<?= $order->sales_id?>"  class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Facturée</i></a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <?php endif;?>
-                                                <?php if($order->sales_status == 3): ?>
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="<?= base_url() ?>/sell/normalize/<?= $order->sales_id?>"  class="menu-link px-3"><i class="fa fa-check text-success py-2"> Normalisé</i></a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <?php endif;?>
-                                                <?php if($order->sales_status <= 3): ?>
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <p class="menu-link px-3"onclick='removePrice(<?=$order->sales_id ?>, <?=json_encode($order)?>)' ><i class="fa fa-trash text-danger py-2"> Supprimer</i></p>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <?php endif;?>
-                                                <?php if($order->sales_status > 2): ?>
-                                                <!--begin::Menu item-->
-                                                <div class="menu-item px-3">
-                                                    <a href="<?= base_url() ?>/sell/vue/<?= $order->sales_id?>"  class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Consulter</i></a>
-                                                </div>
-                                                <!--end::Menu item-->
-                                                <?php endif;?>
+                                                    <div class="menu-item px-3">
+                                                        <a href="<?= base_url() ?>/sell/update/<?= $order->sales_id ?>"  class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Editer</i></a>
+                                                    </div>
+                                                    end::Menu item-->
+                                                <?php if ($order->sales_status == 2) : ?>
+                                                    <!--begin::Menu item-->
+                                                    <div class="menu-item px-3">
+                                                        <a href="<?= base_url() ?>/sell/invoice/<?= $order->sales_id ?>" class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Facturée</i></a>
+                                                    </div>
+                                                    <!--end::Menu item-->
+                                                <?php endif; ?>
+                                                <?php if ($order->sales_status == 3) : ?>
+                                                    <!--begin::Menu item-->
+                                                    <div class="menu-item px-3">
+                                                        <a href="<?= base_url() ?>/sell/normalize/<?= $order->sales_id ?>" class="menu-link px-3"><i class="fa fa-check text-success py-2"> Normalisé</i></a>
+                                                    </div>
+                                                    <!--end::Menu item-->
+                                                <?php endif; ?>
+                                                <?php if ($order->sales_status <= 3) : ?>
+                                                    <!--begin::Menu item-->
+                                                    <div class="menu-item px-3">
+                                                        <p class="menu-link px-3" onclick='removePrice(<?= $order->sales_id ?>, <?= json_encode($order) ?>)'><i class="fa fa-trash text-danger py-2"> Supprimer</i></p>
+                                                    </div>
+                                                    <!--end::Menu item-->
+                                                <?php endif; ?>
+                                                <?php if ($order->sales_status > 2) : ?>
+                                                    <!--begin::Menu item-->
+                                                    <div class="menu-item px-3">
+                                                        <a href="<?= base_url() ?>/sell/vue/<?= $order->sales_id ?>" class="menu-link px-3"><i class="fa fa-edit text-primary py-2"> Consulter</i></a>
+                                                    </div>
+                                                    <!--end::Menu item-->
+                                                <?php endif; ?>
                                             </div>
                                             <!--end::Menu-->
                                         </td>
-                                        <!--end::Action=-->
-                                    </tr>
-                                    <!--end::Table row-->	
-                                <?php $i++; endforeach ?>							
+
+                                    </tr>                                                       
+                                <?php  endforeach ?>
+                                <tr style="background-image: linear-gradient(to bottom right,#5d6d7e, #FFF, #CCC, #5d6d7e);">
+                                    <td colspan="2" style="text-align:left">
+                                      <strong style="font-weight: bold; "> Client :</strong> <span >  <?= $order->clients_company ?></span>
+                                    </td>
+                                    
+                                    
+                                    <td colspan="2">
+                                    <strong style="font-weight: bold; "> Vendeur :</strong> <span ><?= $order->last_name.' '.$order->first_name.' '.$order->first_name?></span>
+                                    </td>
+                                    
+                                    <td colspan="4">
+                                    <strong style="font-weight: bold; "> Net Payé :</strong> <span ><?= $order->sales_amount?></span>
+                                    </td>   
+                                </tr>
+                            <?php  endforeach ?>
                         </tbody>
                         <!--end::Table body-->
                     </table>
@@ -606,92 +574,175 @@
 </div>
 <!--end::Content-->
 <?= $this->section('javascript') ?>
-    <script type="text/javascript">
-        var base_url = "<?= base_url() ?>";
-        var active_mes = "Vous souhaitez activer ce produit. Une fois activé, il apparaitra à nouveau dans les modules d'approvisionnement et de vente<span class='badge badge-primary'>Etes-vous sûr de vouloir l'activer ?</span>";
-      
-        function removePrice(id, product) {
-            let mes = "Etes-vous certain de vouloir suprimer cette vente ?";
-             Swal.fire({
-                html: mes,
-                icon: "warning",
-                buttonsStyling: false,
-                showCancelButton: true,
-                confirmButtonText: "J'en suis certain!",
-                cancelButtonText: "Non, J'abandonne.",
-                customClass: {
-                    confirmButton: "btn btn-primary",
-                    cancelButton: 'btn btn-danger'
-                }
-            }).then((result)=>
-                {
-                    if(result.value) 
-                        document.location.href="<?=  base_url(); ?>/sell/delete/"+id;                           
-                });  
-        }
+<script type="text/javascript">
+    var base_url = "<?= base_url() ?>";
+    var active_mes = "Vous souhaitez activer ce produit. Une fois activé, il apparaitra à nouveau dans les modules d'approvisionnement et de vente<span class='badge badge-primary'>Etes-vous sûr de vouloir l'activer ?</span>";
+    var export_file_name = "<?= base_url().'/writable/uploads/sale_point/sale_point.pdf' ?>";     
 
-        function edit(id, product) {
-           let table = document.getElementById("kt_table_users");
-           document.getElementById("kt_modal_new_address_form").action = "<?= base_url() ?>"+"/price/edit";
-           document.getElementById("externalID").value = id;
-           document.getElementById("modalTitle").innerHTML = "Mise à jour de produit";
-           document.getElementById("submitText").innerHTML = "Sauvegarder";
-           document.getElementById("product_categories_id").value = product.product_categories_id;
-           document.getElementById("product_prices_product_id").value = product.product_prices_product_id;
-           document.getElementById("product_prices_sales_option_id").value = product.product_prices_sales_option_id;
-           document.getElementById("product_prices_price").value = product.product_prices_price;
+    $(document).ready(function() {
+       // alert((document.getElementById("search_form2").style.height+' '+ document.getElementById("end").style.height)+" px")
+        document.getElementById("search_id").style.height = document.getElementById("end").style.height;
+        //document.getElementById("search_id").style.marginTop  = (document.getElementById("search_form2").style.height- document.getElementById("end").style.height)+"px";
+    });search-form
+    function removePrice(id, product) {
+        let mes = "Etes-vous certain de vouloir suprimer cette vente ?";
+        Swal.fire({
+            html: mes,
+            icon: "warning",
+            buttonsStyling: false,
+            showCancelButton: true,
+            confirmButtonText: "J'en suis certain!",
+            cancelButtonText: "Non, J'abandonne.",
+            customClass: {
+                confirmButton: "btn btn-primary",
+                cancelButton: 'btn btn-danger'
+            }
+        }).then((result) => {
+            if (result.value)
+                document.location.href = "<?= base_url(); ?>/sell/delete/" + id;
+        });
+    }
 
-           document.getElementById("product_categories_id").disabled = true;
-           document.getElementById("product_prices_product_id").disabled = true;
-           document.getElementById("product_prices_sales_option_id").disabled = true;
-           //updateCategory(category);
-           
-        }
-       
-        $(window).on('load', function() {
-            if(showModal == 1)
-                 $('#external_create_new').modal('show');
+    function edit(id, product) {
+        let table = document.getElementById("kt_table_users");
+        document.getElementById("kt_modal_new_address_form").action = "<?= base_url() ?>" + "/price/edit";
+        document.getElementById("externalID").value = id;
+        document.getElementById("modalTitle").innerHTML = "Mise à jour de produit";
+        document.getElementById("submitText").innerHTML = "Sauvegarder";
+        document.getElementById("product_categories_id").value = product.product_categories_id;
+        document.getElementById("product_prices_product_id").value = product.product_prices_product_id;
+        document.getElementById("product_prices_sales_option_id").value = product.product_prices_sales_option_id;
+        document.getElementById("product_prices_price").value = product.product_prices_price;
+
+        document.getElementById("product_categories_id").disabled = true;
+        document.getElementById("product_prices_product_id").disabled = true;
+        document.getElementById("product_prices_sales_option_id").disabled = true;
+        //updateCategory(category);
+
+    }
+
+    $(window).on('load', function() {
+        if (showModal == 1)
+            $('#external_create_new').modal('show');
     });
 
-    
-    $('#product_categories_id').change(function(){
-        if($(this).val() != '')
-        {
-            var value = $(this).val();   
+
+    $('#product_categories_id').change(function() {
+        if ($(this).val() != '') {
+            var value = $(this).val();
             $.ajax({
-                url: base_url+"/dynamic/product",
-                method:"POST",
-                data:{id:value},
-                success:function(result)
-                {
-                $('#product_prices_product_id').html(result);
+                url: base_url + "/dynamic/product",
+                method: "POST",
+                data: {
+                    id: value
+                },
+                success: function(result) {
+                    $('#product_prices_product_id').html(result);
                 }
             })
         }
     });
 
-    $('#product_prices_product_id').change(function(){
-        if($(this).val() != '')
-        {
-            var value = $(this).val();   
+    $('#product_prices_product_id').change(function() {
+        if ($(this).val() != '') {
+            var value = $(this).val();
             $.ajax({
-                url: base_url+"/dynamic/sale_options",
-                method:"POST",
-                data:{id:value},
-                success:function(result)
-                {
-                $('#product_prices_sales_option_id').html(result);
+                url: base_url + "/dynamic/sale_options",
+                method: "POST",
+                data: {
+                    id: value
+                },
+                success: function(result) {
+                    $('#product_prices_sales_option_id').html(result);
                 }
             })
         }
     });
 
     function initPage() {
-           document.getElementById("product_categories_id").value = category;
-           document.getElementById("product_categories_id").dispatchEvent(new Event('change'));
+        document.getElementById("product_categories_id").value = category;
+        document.getElementById("product_categories_id").dispatchEvent(new Event('change'));
     }
 
-    </script>
+
+
+
+
+    var begin = document.getElementById("begin");
+    var end = document.getElementById("end");
+    var export_file_type = document.getElementById("export_file_type");
+    var export_btn = document.getElementById("export_id");
+    var old_begin = "<?= isset($old_begin) ? $old_begin  : 0 ?>";
+    var old_end = "<?= isset($old_end) ? $old_end  : 0 ?>";        
+
+    $('#export_id').click(function(){
+       if($("#export_file_type").val())
+        {
+            let begin_date = $("#begin").val();   
+            let end_date = $("#end").val();   
+            let selected_type = $("#export_file_type").val();   
+            $.ajax({
+                url: base_url+"/sell/generate_sales_point_pdf",
+                method:"POST",
+                data:{begin:begin_date, end:end_date, selected_type:selected_type},
+                success:function(result)
+                {
+                    window.open(export_file_name)
+                }
+            })
+        }else{
+            let selected_type = $("#export_file_type").val();   
+            $.ajax({
+                url: base_url+"/sell/generate_sales_point_pdf",
+                method:"POST",
+                data:{begin:0, end:0, selected_type:selected_type},
+                success:function(result)
+                {
+                  window.open(export_file_name)
+                }
+            })
+        }
+    });
+
+   
+        
+    $('#begin').change(function(){
+        end.setAttribute("min", $(this).val());
+    });
+    $('#end').change(function(){
+        begin.setAttribute("max", $(this).val());
+    });
+
+
+    function validate_date(){
+        var today = new Date();
+
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+        var yyyy = today.getFullYear();
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        if(dd<10){
+        dd='0'+dd
+        } 
+        if(mm<10){
+        mm='0'+mm
+        } 
+
+        today = yyyy+'-'+mm+'-'+dd+'T'+hour+':'+minute;
+        begin.setAttribute("min", today);
+        end.setAttribute("min", today);
+    }
+
+    $(window).on('load', function() {
+        if(old_begin!=0){
+            $('#begin').val(old_begin);
+            $('#end').val(old_end);
+        }
+    });
+
+
+</script>
 <?= $this->endSection() ?>
 
- <?= $this->endSection() ?>
+<?= $this->endSection() ?>

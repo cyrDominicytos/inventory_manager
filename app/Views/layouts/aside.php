@@ -81,6 +81,14 @@ if (session()->has("aside")) {
                                             <span class="menu-title">Consulter liste</span>
                                         </a>
                                     <?php endif; ?>
+                                    <?php if (array_key_exists(21, $auth_user_permissions)) : ?>
+                                        <a class="menu-link" href="<?= base_url() ?>/sell/sales_point">
+                                            <span class="menu-bullet">
+                                                <span class="bullet bullet-dot"></span>
+                                            </span>
+                                            <span class="menu-title">Point Ventes</span>
+                                        </a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

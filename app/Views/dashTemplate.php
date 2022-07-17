@@ -44,7 +44,10 @@
 		thead > tr > th {
 			text-align: center;
 			color:black;
-			font-size:medium
+			font-size:medium;
+
+			/* border: 1px solid black;
+			border-collapse: collapse; */
 		}
 		thead > tr {
 			text-transform: uppercase;
@@ -53,6 +56,11 @@
 			text-align: center;
 			color: black;
 		}
+
+		/* table, td, th, tr, thead, tbody{
+			border: 1px solid black;
+			border-collapse: collapse;
+		} */
 	</style>
 	<body id="kt_body"   class="header-fixed header-tablet-and-mobile-fixed toolbar-enabled toolbar-fixed toolbar-tablet-and-mobile-fixed aside-enabled aside-fixed" style="--kt-toolbar-height:55px;--kt-toolbar-height-tablet-and-mobile:55px">
 		<!--begin::Main-->
